@@ -7,7 +7,7 @@ import requests
 def submitter(url, usernames: list, passwords: list, delay=0):
     found = []
     session = requests.Session()
-
+    print(f"Submitting form data to {url}...")
     for password in passwords:
         for username in usernames:
             payload = {"username": username, "password": password}

@@ -87,6 +87,7 @@ python "Login_Brute-Forcer_with_Session_Management.py" -t http://example.com/log
 |   FORM SUBMITTER TOOL            |
 |                                  |
 ====================================
+Submitting form data to example/login.com...
 Found valid credentials: admin:password123
 Found valid credentials: admin:letmein
 Found valid credentials: root:toor
@@ -110,8 +111,8 @@ root:toor
 
 ## Limitations
 
-* **No CSRF Handling:** This version does **not** extract or submit CSRF tokens. It will fail on login forms that require a CSRF token (most modern web applications). For CSRF support, use the `Login_Brute-Forcer_with_CSRF_Handler.py` variant.
-* **Success Detection:** Only detects `302` redirects. Some applications return `200` with a dashboard or `301` redirect, which will be missed.
+* **No CSRF Handling:** This version does **not** extract or submit CSRF tokens. 
+* **Success Detection:** Only detects `302` redirects. 
 * **No Multi-Threading:** The scan is single-threaded and can be slow for large wordlists.
 * **No TLS Verification Bypass:** Does not bypass self-signed or invalid SSL certificates (add `verify=False` to `requests` calls for testing).
 * **No Authentication Headers:** Does not support Bearer tokens, API keys, or custom authentication headers beyond the POST payload.
