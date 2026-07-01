@@ -1,7 +1,7 @@
 import ipaddress
 import socket
 
-DEFAULT_HOST = "192.168.0.20"
+DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 4444
 
 
